@@ -1,0 +1,24 @@
+name: 'Gomplate Template Processor'
+description: 'A GitHub Action for running Gomplate to process templates'
+author: 'Ammar Lakis <ammar.lakis@gmail.com>'
+branding:
+  icon: 'file-text'
+  color: 'blue'
+
+inputs:
+  input_file:
+    description: 'Path to the Gomplate template file'
+    required: true
+  output_file:
+    description: 'Path to the output file'
+    required: false
+  data_sources:
+    description: 'Additional data sources for template processing'
+    required: false
+  options:
+    description: 'Extra Gomplate CLI options'
+    required: false
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
